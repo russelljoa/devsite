@@ -1,0 +1,83 @@
+:root {
+  --vscode-bg: #282c34;
+  --vscode-sidebar-bg: #21252b;
+  --vscode-titlebar-bg: #21252b;
+  --vscode-tab-bg: #21252b;
+  --vscode-tab-active-bg: #282c34;
+  --vscode-border: #181a1f;
+  --vscode-text: #cccccc;
+  --vscode-text-inactive: #858585;
+  --vscode-highlight: #0e639c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: var(--vscode-text);
+}
+
+.vscode-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--vscode-bg);
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  background-color: var(--vscode-titlebar-bg);
+  padding: 0 10px;
+  color: var(--vscode-text-inactive);
+  font-size: 12px;
+  user-select: none;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.minimize {
+  background-color: #f1c40f;
+}
+
+.maximize {
+  background-color: #27ae60;
+}
+
+.close {
+  background-color: #e74c3c;
+}
+
+.wrapper {
+  display: flex;
+  height: calc(100vh - 30px);
+}
+
+.explorer-wrapper {
+  width: 250px;
+  background-color: var(--vscode-sidebar-bg);
+  border-right: 1px solid var(--vscode-border);
+  overflow-y: auto;
+}
+
+.editor-wrapper {
+  flex: 1;
+  overflow: hidden;
+  background-color: var(--vscode-bg);
+}
