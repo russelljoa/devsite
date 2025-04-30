@@ -35,7 +35,7 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
                     className="folder-header" 
                     onClick={() => toggleFolder('portfolio')}
                 >
-                    <span className={`folder-icon ${expandedFolders.portfolio ? 'expanded' : ''}`}><img className = "arrow-icon" src = "icons/arrow.png"></img></span>
+                    <span className={`folder-icon ${expandedFolders.portfolio ? 'expanded' : ''}`}><img className="arrow-icon" src="/icons/arrow.png" alt="Arrow" /></span>
                     <span className="folder-name">PORTFOLIO</span>
                 </div>
                 
@@ -47,7 +47,7 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
                                 className={`file-item ${currentTab === tab.id ? 'active' : ''}`}
                                 onClick={() => setCurrentTab(tab.id)}
                             >
-                                <span className="file-icon"><img className = "tab-icon" src = {tab.iconfile}></img></span>
+                                <span className="file-icon"><img className="tab-icon" src={tab.iconfile} alt={tab.title} /></span>
                                 {tab.title}
                             </div>
                         ))}
@@ -60,7 +60,7 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
                     className="folder-header" 
                     onClick={() => toggleFolder('src')}
                 >
-                    <span className={`folder-icon ${expandedFolders.src ? 'expanded' : ''}`}><img className = "arrow-icon" src = "icons/arrow.png"></img></span>
+                    <span className={`folder-icon ${expandedFolders.src ? 'expanded' : ''}`}><img className="arrow-icon" src="/icons/arrow.png" alt="Arrow" /></span>
                     <span className="folder-name">SRC</span>
                 </div>
                 
@@ -73,7 +73,7 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
                                 onClick={() => setCurrentTab(contactCssTab.id)}
                             >
                                 <span className="file-icon">
-                                    <img className="tab-icon" src={contactCssTab.iconfile} />
+                                    <img className="tab-icon" src={contactCssTab.iconfile} alt={contactCssTab.title} />
                                 </span>
                                 {contactCssTab.title}
                             </div>
@@ -84,7 +84,7 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
                                 onClick={() => setCurrentTab(resumePdfTab.id)}
                             >
                                 <span className="file-icon">
-                                    <img className="tab-icon" src={resumePdfTab.iconfile} />
+                                    <img className="tab-icon" src={resumePdfTab.iconfile} alt={resumePdfTab.title} />
                                 </span>
                                 {resumePdfTab.title}
                             </div>

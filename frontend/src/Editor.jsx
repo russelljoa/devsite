@@ -111,7 +111,7 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                 <div className="run-button-container">
                     <div className="run-button-wrapper">
                         <button className="run-button">
-                            <img src="icons/run.png" alt="Run" className="run-icon" />
+                            <img src="/icons/run.png" alt="Run" className="run-icon" />
                         </button>
                     </div>
                 </div>

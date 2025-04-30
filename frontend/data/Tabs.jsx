@@ -3,7 +3,7 @@ export const tabsData = [
         id: "about.md",
         title: "about.md",
         language: "markdown",
-        iconfile: "public/icons/md.png",
+        iconfile: "/icons/md.png",
         content: `# Russell Joarder
 
 Hello there! 👋 I'm a Boston University student studying Computer Science with a minor in Business Administration & Management.
@@ -26,7 +26,7 @@ Feel free to explore the tabs above to learn more about my education, skills, an
         id: "education.py",
         title: "education.py",
         language: "python",
-        iconfile: "public/icons/python.png",
+        iconfile: "/icons/python.png",
         content: `class Education:
     def __init__(self):
         self.degrees = [
@@ -68,7 +68,7 @@ my_education.display_education()
         id: "community.html",
         title: "community.html",
         language: "html",
-        iconfile: "public/icons/html.png",
+        iconfile: "/icons/html.png",
         content: `<h1>Community Involvement</h1>
 <h2>Boston University</h2>
 <ul>
@@ -88,7 +88,7 @@ my_education.display_education()
         id: "skills.json",
         title: "skills.json",
         language: "json",
-        iconfile: "public/icons/json.png",
+        iconfile: "/icons/json.png",
         content: `{
   "technicalSkills": {
     "programmingLanguages": [
@@ -136,7 +136,7 @@ my_education.display_education()
         id: "projects.jsx",
         title: "projects.jsx",
         language: "jsx",
-        iconfile: "public/icons/react.png",
+        iconfile: "/icons/react.png",
         content: `import React from 'react';
 
 const Projects = () => {
@@ -200,7 +200,7 @@ export default Projects;`
         id: "contact.css",
         title: "contact.css",
         language: "css",
-        iconfile: "public/icons/css-icon.png",
+        iconfile: "/icons/css-icon.png",
         content: `.contact-info {
     email: rjoarder@bu.edu;
     linkedin: https://www.linkedin.com/in/russell-joarder/;
@@ -218,7 +218,7 @@ export default Projects;`
         id: "experience.java",
         title: "experience.java",
         language: "java",
-        iconfile: "public/icons/java.png",
+        iconfile: "/icons/java.png",
         content: `public class WorkExperience {
     
     public static void main(String[] args) {
@@ -290,8 +290,8 @@ class Experience {
         id: "resume.pdf",
         title: "resume.pdf",
         language: "pdf",
-        iconfile: "public/icons/pdf.png",
-        filePath: "public/files/RussellJoarder_Resume2025.pdf",
+        iconfile: "/icons/pdf.png",
+        filePath: "/files/RussellJoarder_Resume2025.pdf",
         content: "" // Content remains empty as we'll be displaying PDF directly
     },
 ];
