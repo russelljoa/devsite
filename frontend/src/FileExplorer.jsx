@@ -35,7 +35,7 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
                     className="folder-header" 
                     onClick={() => toggleFolder('portfolio')}
                 >
-                    <span className={`folder-icon ${expandedFolders.portfolio ? 'expanded' : ''}`}><img className = "arrow-icon" src = "public/Icons/arrow.png"></img></span>
+                    <span className={`folder-icon ${expandedFolders.portfolio ? 'expanded' : ''}`}><img className = "arrow-icon" src = "icons/arrow.png"></img></span>
                     <span className="folder-name">PORTFOLIO</span>
                 </div>
                 
@@ -60,7 +60,7 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
                     className="folder-header" 
                     onClick={() => toggleFolder('src')}
                 >
-                    <span className={`folder-icon ${expandedFolders.src ? 'expanded' : ''}`}><img className = "arrow-icon" src = "public/Icons/arrow.png"></img></span>
+                    <span className={`folder-icon ${expandedFolders.src ? 'expanded' : ''}`}><img className = "arrow-icon" src = "icons/arrow.png"></img></span>
                     <span className="folder-name">SRC</span>
                 </div>
                 
