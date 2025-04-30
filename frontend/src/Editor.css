@@ -21,41 +21,164 @@
 .main-editor-content {
   flex: 1;
   display: flex;
-  overflow-y: auto;
   background-color: var(--vscode-bg);
   padding: 10px 0;
+  overflow: hidden; /* Changed from overflow-y: auto to hidden */
 }
 
+/* New wrapper container to handle scrolling */
+.editor-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Container for synchronized scrolling between line numbers and code */
+.editor-synchronized-container {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+}
 
 .code-content {
   flex: 1;
-  color: var(--vscode-text);
   font-family: "Consolas", "Monaco", "Courier New", monospace;
   line-height: 1.5;
   font-size: 14px;
-  white-space: pre-wrap;
+  white-space: pre;
+  overflow: visible;
 }
 
-/* Syntax highlighting colors */
-.language-markdown {
-  color: #c586c0;
+/* Line numbers styles */
+.line-numbers {
+  padding: 0 10px;
+  text-align: right;
+  color: #858585;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  user-select: none;
+  min-width: 40px;
+  background-color: var(--vscode-bg);
+  position: sticky;
+  left: 0;
 }
 
-.language-python {
-  color: #569cd6;
-}
-
-.language-json {
-  color: #ce9178;
-}
-
-.language-javascript,
-.language-jsx {
-  color: #9cdcfe;
+.line-number {
+  padding: 0 5px;
+  height: 1.5em;
 }
 
 pre {
   margin: 0;
+}
+
+.code-block {
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+}
+
+/* Set correct styling for prism code blocks */
+pre[class*="language-"] {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+code[class*="language-"] {
+  text-shadow: none;
+  background: none;
+  color: #ABB2BF; /* Default text color */
+  display: block;
+  min-height: 100%;
+}
+
+/* Custom PrismJS syntax highlighting theme */
+/* Comments */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #5C6370;
+}
+
+/* Strings */
+.token.string,
+.token.char,
+.token.attr-value {
+  color: #98C379;
+}
+
+/* Numbers */
+.token.number,
+.token.hexcode,
+.token.unit {
+  color: #D19A66;
+}
+
+/* Keywords */
+.token.keyword,
+.token.selector,
+.token.important,
+.token.atrule {
+  color: #C678DD;
+}
+
+/* Functions and Methods */
+.token.function,
+.token.function-name,
+.token.method {
+  color: #61AFEF;
+}
+
+/* Variables */
+.token.variable,
+.token.parameter,
+.token.property {
+  color: #E06C75;
+}
+
+/* Constants */
+.token.constant,
+.token.symbol,
+.token.boolean,
+.token.regex {
+  color: #D19A66;
+}
+
+/* Types and Classes */
+.token.class-name,
+.token.builtin,
+.token.attr-name {
+  color: #E5C07B;
+}
+
+/* Brackets and Operators */
+.token.punctuation,
+.token.operator {
+  color: #ABB2BF;
+}
+
+/* Tags */
+.token.tag {
+  color: #E06C75;
+}
+
+/* Attribute names */
+.token.attr-name {
+  color: #D19A66;
+}
+
+/* Built-in/Library elements */
+.token.builtin,
+.token.namespace,
+.token.entity {
+  color: #56B6C2;
 }
 
 /* Run button styles */

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './FileExplorer.css';
 import { tabsData } from '../data/Tabs';
 
-const FileExplorer = ({ setCurrentTab }) => {
+const FileExplorer = ({ setCurrentTab, currentTab }) => {
     const [expandedFolders, setExpandedFolders] = useState({
         portfolio: true,
         src: true,
@@ -18,8 +18,10 @@ const FileExplorer = ({ setCurrentTab }) => {
 
     // Find the contact.css tab
     const contactCssTab = tabsData.find(tab => tab.id === "contact.css");
+    const resumePdfTab = tabsData.find(tab => tab.id === "resume.pdf");
     
     // Filter tabs to exclude contact.css and resume.pdf from portfolio section
+    // They will only be shown in the SRC folder
     const portfolioTabs = tabsData.filter(tab => tab.id !== "contact.css" && tab.id !== "resume.pdf");
 
     return (
@@ -42,7 +44,7 @@ const FileExplorer = ({ setCurrentTab }) => {
                         {portfolioTabs.map(tab => (
                             <div 
                                 key={tab.id}
-                                className="file-item"
+                                className={`file-item ${currentTab === tab.id ? 'active' : ''}`}
                                 onClick={() => setCurrentTab(tab.id)}
                             >
                                 <span className="file-icon"><img className = "tab-icon" src = {tab.iconfile}></img></span>
@@ -64,25 +66,29 @@ const FileExplorer = ({ setCurrentTab }) => {
                 
                 {expandedFolders.src && (
                     <div className="folder-content">
-                        {/* Adding contact.css to SRC folder */}
-                        <div 
-                            className="file-item"
-                            onClick={() => setCurrentTab("contact.css")}
-                        >
-                            <span className="file-icon">
-                                {contactCssTab && <img className="tab-icon" src={contactCssTab.iconfile} />}
-                            </span>
-                            contact.css
-                        </div>
-                        <div 
-                            className="file-item"
-                            onClick={() => setCurrentTab("resume.pdf")}
-                        >
-                            <span className="file-icon">
-                                <img className="tab-icon" src="public/icons/pdf.png" />
-                            </span>
-                            resume.pdf
-                        </div>
+                        {/* Only showing contact.css in SRC folder */}
+                        {contactCssTab && (
+                            <div 
+                                className={`file-item ${currentTab === contactCssTab.id ? 'active' : ''}`}
+                                onClick={() => setCurrentTab(contactCssTab.id)}
+                            >
+                                <span className="file-icon">
+                                    <img className="tab-icon" src={contactCssTab.iconfile} />
+                                </span>
+                                {contactCssTab.title}
+                            </div>
+                        )}
+                        {resumePdfTab && (
+                            <div 
+                                className={`file-item ${currentTab === resumePdfTab.id ? 'active' : ''}`}
+                                onClick={() => setCurrentTab(resumePdfTab.id)}
+                            >
+                                <span className="file-icon">
+                                    <img className="tab-icon" src={resumePdfTab.iconfile} />
+                                </span>
+                                {resumePdfTab.title}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>

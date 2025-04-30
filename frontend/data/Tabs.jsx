@@ -4,21 +4,21 @@ export const tabsData = [
         title: "about.md",
         language: "markdown",
         iconfile: "public/icons/md.png",
-        content: `# Welcome to My Portfolio
+        content: `# Russell Joarder
 
-Hello there! 👋 I'm a passionate developer with expertise in modern web technologies.
+Hello there! 👋 I'm a Boston University student studying Computer Science with a minor in Business Administration & Management.
 
 ## About Me
 
-I am a creative problem solver dedicated to building responsive, user-friendly applications
-that solve real-world problems. My journey in software development has equipped me with
-a diverse set of skills and a commitment to continuous learning.
+I am a passionate developer with a strong foundation in various programming languages and technologies. As a creative problem solver,
+I'm dedicated to building responsive, user-friendly applications that solve real-world problems. My experience ranges from developing
+blockchain applications to creating efficient algorithms.
 
 ## Find Me Online
 
-- GitHub: [github.com/yourusername](https://github.com/yourusername)
-- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- Portfolio: [yourportfolio.com](https://yourportfolio.com)
+- LinkedIn: [linkedin.com/in/russell-joarder](https://linkedin.com/in/russell-joarder)
+- Email: [rjoarder@bu.edu](mailto:rjoarder@bu.edu)
+- Phone: (484) 983-2295
 
 Feel free to explore the tabs above to learn more about my education, skills, and projects!`
     },
@@ -31,37 +31,33 @@ Feel free to explore the tabs above to learn more about my education, skills, an
     def __init__(self):
         self.degrees = [
             {
-                "degree": "Bachelor of Science in Computer Science",
-                "institution": "University of Technology",
-                "location": "San Francisco, CA",
-                "graduation_year": 2021,
-                "gpa": 3.8
+                "degree": "Bachelor of Arts in Computer Science",
+                "institution": "Boston University",
+                "location": "Boston, Massachusetts",
+                "expected_graduation": 2028,
+                "gpa": 4.0,
+                "minor": "Business Administration & Management"
             },
             {
-                "degree": "Full-Stack Web Development Bootcamp",
-                "institution": "Coding Academy",
-                "location": "Online",
-                "graduation_year": 2022,
-                "projects_completed": 15
+                "degree": "High School Diploma",
+                "institution": "Westtown School",
+                "location": "West Chester, Pennsylvania",
+                "graduation_year": 2024
             }
-        ]
-        
-        self.certifications = [
-            "AWS Certified Developer - Associate",
-            "Google Cloud Professional Developer",
-            "MongoDB Certified Developer",
-            "Scrum Master Certified"
         ]
     
     def display_education(self):
         print("== FORMAL EDUCATION ==")
         for degree in self.degrees:
             print(f"{degree['degree']} from {degree['institution']}")
-            print(f"Graduated: {degree['graduation_year']}")
-            
-        print("\\n== CERTIFICATIONS ==")
-        for cert in self.certifications:
-            print(f"- {cert}")
+            if "expected_graduation" in degree:
+                print(f"Expected Graduation: {degree['expected_graduation']}")
+            else:
+                print(f"Graduated: {degree['graduation_year']}")
+            if "gpa" in degree:
+                print(f"GPA: {degree['gpa']}/4.0")
+            if "minor" in degree:
+                print(f"Minor: {degree['minor']}")
 
 # Create an instance and display education information
 my_education = Education()
@@ -69,98 +65,115 @@ my_education.display_education()
 `
     },
     {
-        id: "languages.json",
-        title: "languages.json",
+        id: "community.html",
+        title: "community.html",
+        language: "html",
+        iconfile: "public/icons/html.png",
+        content: `<h1>Community Involvement</h1>
+<h2>Boston University</h2>
+<ul>
+    <li> VP of Strategy at BU Blockchain Club (Arpil 2024 - Present) </li>
+    <li> Member of BU Blockchain Club (Sep 2023 - Arpil 2024) </li>
+</ul>
+<h2>Westtown School</h2>
+<ul>
+    <li> Head and founder of South Asian Multicultural Organized Student Association (Sep 2023 - June 2024) </li>
+    <li> Member of Westtown School's Student Ambassador Digital Marketing Team (Sep 2022 - June 2024) </li>
+    <li> Varsity Wrestling - Three Time State Qualifier (Nov 2022 - Feb 2024) </li>
+    <li> Member of Westtown School Investment Club (Sep 2022 - June 2023) </li>
+</ul>
+        `
+    },
+    {
+        id: "skills.json",
+        title: "skills.json",
         language: "json",
         iconfile: "public/icons/json.png",
         content: `{
-  "programmingLanguages": [
-    {
-      "name": "JavaScript",
-      "proficiency": "Expert",
-      "yearsOfExperience": 5,
-      "frameworks": ["React", "Vue", "Node.js", "Express"]
-    },
-    {
-      "name": "Python",
-      "proficiency": "Advanced",
-      "yearsOfExperience": 3,
-      "frameworks": ["Flask", "Django", "FastAPI"]
-    },
-    {
-      "name": "TypeScript",
-      "proficiency": "Advanced",
-      "yearsOfExperience": 3,
-      "frameworks": ["Angular", "Next.js"]
-    },
-    {
-      "name": "HTML/CSS",
-      "proficiency": "Expert",
-      "yearsOfExperience": 5,
-      "cssFrameworks": ["Tailwind", "Bootstrap", "SASS"]
-    },
-    {
-      "name": "SQL",
-      "proficiency": "Advanced",
-      "yearsOfExperience": 4,
-      "databases": ["PostgreSQL", "MySQL", "SQLite"]
-    }
+  "technicalSkills": {
+    "programmingLanguages": [
+      "Python",
+      "React",
+      "PHP",
+      "Java",
+      "JSP",
+      "Flask",
+      "Solidity",
+      "SQL",
+      "Node.js",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "systemKnowledge": [
+      "MongoDB",
+      "Webflow",
+      "Microsoft Excel",
+      "Git",
+      "VS Code",
+      "Stripe",
+      "PHPMyAdmin"
+    ]
+  },
+  "otherSkills": [
+    "Leadership",
+    "Team Management",
+    "Problem Solving",
+    "Customer Support",
+    "Project Management",
+    "Digital Marketing"
   ],
-  "spokenLanguages": [
-    {
-      "name": "English",
-      "proficiency": "Native"
-    },
-    {
-      "name": "Spanish",
-      "proficiency": "Conversational"
-    }
-  ],
-  "currentlyLearning": ["Rust", "Kotlin", "WebAssembly"]
+  "interests": [
+    "Blockchain Technology",
+    "Web Development",
+    "Data Science",
+    "Investment",
+    "Digital Entrepreneurship"
+  ]
 }`
     },
     {
         id: "projects.jsx",
         title: "projects.jsx",
         language: "jsx",
-        iconfile: "public/icons/React.png",
+        iconfile: "public/icons/react.png",
         content: `import React from 'react';
 
 const Projects = () => {
   const projectList = [
     {
-      name: "E-commerce Platform",
-      description: "A full-featured online store with user authentication, product catalog, shopping cart, and payment processing.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-      role: "Lead Developer",
-      url: "https://github.com/yourusername/ecommerce-platform"
+      name: "Wordle Solver",
+      description: "A unique Wordle solver with a 99% success rate, featuring a sophisticated word recommendation algorithm.",
+      tech: ["Python", "React", "CSS", "Flask"],
+      achievements: "Designed and developed both the backend algorithm and frontend website interface",
+      details: "Structured dataset into optimized hashmaps with metadata for each word for effective use in software"
     },
     {
-      name: "Task Management Dashboard",
-      description: "A Kanban-style project management tool with drag-and-drop interface, team collaboration features, and real-time updates.",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS"],
-      role: "Frontend Developer",
-      url: "https://github.com/yourusername/task-dashboard"
+      name: "Swap Squad",
+      description: "The first decentralized peer-to-peer marketplace on the TRON blockchain with competitive fees.",
+      tech: ["Solidity", "TRON", "React", "Flask"],
+      achievements: "2nd Place Prize Winner at Hackathon",
+      details: "Leveraged Solidity to build the smart contract on TRON network, ensuring security, transparency, and reliability"
     },
     {
-      name: "Weather Forecast App",
-      description: "A mobile-responsive weather application that provides current conditions and 5-day forecasts for any location.",
-      tech: ["React Native", "OpenWeather API", "Geolocation API"],
-      role: "Solo Developer",
-      url: "https://github.com/yourusername/weather-app"
+      name: "Westtown School Dining Website",
+      description: "A dynamic website to resolve a school-wide dining hall menu accessibility issue.",
+      tech: ["PHP", "SQL", "CSS", "JavaScript"],
+      achievements: "Led a team of six developers",
+      details: "Conducted surveys to gather feedback, ensuring site accessibility and effectiveness"
     },
     {
-      name: "Personal Finance Tracker",
-      description: "An application for tracking expenses, income, and budget management with visual reports and insights.",
-      tech: ["Angular", "Chart.js", "Express", "PostgreSQL"],
-      role: "Full Stack Developer",
-      url: "https://github.com/yourusername/finance-tracker"
+      name: "Let's Cook AIO",
+      description: "A subscription-based digital business providing profitable reselling information.",
+      tech: ["Python", "MongoDB", "Discord API", "HTML", "Tailwind CSS", "JavaScript"],
+      achievements: "Generated over $30,000 through subscription model",
+      details: "Developed Python-based chatbots using MongoDB for customer support, subscription management, and onboarding"
     }
   ];
 
   return (
     <div className="projects-container">
-      <h2>Featured Projects</h2>
+      <h2>Projects & Experience</h2>
       {projectList.map((project, index) => (
         <div key={index} className="project-card">
           <h3>{project.name}</h3>
@@ -173,10 +186,8 @@ const Projects = () => {
               ))}
             </ul>
           </div>
-          <p><strong>Role:</strong> {project.role}</p>
-          <a href={project.url} target="_blank" rel="noopener noreferrer">
-            View Project
-          </a>
+          <p><strong>Achievement:</strong> {project.achievements}</p>
+          <p>{project.details}</p>
         </div>
       ))}
     </div>
@@ -188,13 +199,13 @@ export default Projects;`
     {
         id: "contact.css",
         title: "contact.css",
-        language: "markdown",
+        language: "css",
         iconfile: "public/icons/css-icon.png",
         content: `.contact-info {
-\temail: rjoarder@bu.edu;
-\tlinkedin: https://www.linkedin.com/in/russell-joarder/;
-\tgithub: https://github.com/russelljoa;
-\tphone: (484) 983-2295;
+    email: rjoarder@bu.edu;
+    linkedin: https://www.linkedin.com/in/russell-joarder/;
+    phone: (484) 983-2295;
+    location: West Chester, PA / Boston, MA;
 }
 
 /* 
@@ -202,6 +213,78 @@ export default Projects;`
  * I am always open to discussing new projects, 
  * ideas, or opportunities to collaborate! 
  */`
+    },
+    {
+        id: "experience.java",
+        title: "experience.java",
+        language: "java",
+        iconfile: "public/icons/java.png",
+        content: `public class WorkExperience {
+    
+    public static void main(String[] args) {
+        // Initialize and display work experiences
+        Experience[] experiences = new Experience[2];
+        
+        experiences[0] = new Experience(
+            "Let's Cook AIO",
+            "Digital Startup",
+            "Co-Founder",
+            "Sep 2022", "Dec 2024",
+            new String[]{
+                "Generated over $30,000 through a subscription-based digital business model, monetizing profitable reselling info",
+                "Developed Python-based chatbots using MongoDB and social media platform Discord's APIs for customer support, subscription management, member onboarding, and automatic sales funnels",
+                "Designed and launched company website with HTML, Tailwind CSS, and JavaScript",
+                "Provided digital services and support to 800+ paid subscribers, maximizing retention and satisfaction",
+                "Managed 30+ contractors to deliver premium content for subscribers"
+            }
+        );
+        
+        experiences[1] = new Experience(
+            "Westtown School Summer Day Camps",
+            "West Chester, Pennsylvania",
+            "Camp Counselor",
+            "June 2022", "Aug 2023",
+            new String[]{
+                "Developed and enhanced leadership, teamwork, and problem-solving skills through daily camp operations",
+                "Facilitated engaging and educational activities for children ages 4-13, ensuring safety and enjoyment",
+                "Managed day-to-day camp logistics, maintaining a smooth and positive camp experience for participants"
+            }
+        );
+        
+        for (Experience exp : experiences) {
+            exp.displayExperience();
+            System.out.println("----------------------------------");
+        }
+    }
+}
+
+class Experience {
+    private String company;
+    private String location;
+    private String title;
+    private String startDate;
+    private String endDate;
+    private String[] responsibilities;
+    
+    public Experience(String company, String location, String title, 
+                    String startDate, String endDate, String[] responsibilities) {
+        this.company = company;
+        this.location = location;
+        this.title = title;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.responsibilities = responsibilities;
+    }
+    
+    public void displayExperience() {
+        System.out.println(company + " | " + location);
+        System.out.println(title + " (" + startDate + " - " + endDate + ")");
+        System.out.println("\nResponsibilities:");
+        for (String responsibility : responsibilities) {
+            System.out.println("• " + responsibility);
+        }
+    }
+}`
     },
     {
         id: "resume.pdf",

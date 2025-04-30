@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Editor from "./Editor";
 import FileExplorer from "./FileExplorer";
@@ -19,7 +19,7 @@ function App() {
             </div>
             <div className="wrapper">
                 <div className="explorer-wrapper">
-                    <FileExplorer setCurrentTab={setCurrentTab} />
+                    <FileExplorer setCurrentTab={setCurrentTab} currentTab={currentTab} />
                 </div>
                 <div className="editor-wrapper">
                     <Editor currentTab={currentTab} setCurrentTab={setCurrentTab} />
