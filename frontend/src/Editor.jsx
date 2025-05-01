@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './Editor.css';
 import Tab from './Tab';
 import { tabsData } from '../data/Tabs';
-
+import Typewriter from './Typewriter';
 // Import Prism properly
 import Prism from 'prismjs';
 // Import basic languages that don't depend on others
@@ -76,6 +76,7 @@ const Editor = ({ currentTab, setCurrentTab }) => {
         const lineCount = (activeTab.content.match(/\n/g) || []).length + 1;
 
         return (
+            <>
             <div className="editor-content-wrapper">
                 <div className="editor-synchronized-container">
                     <div className="line-numbers">
@@ -92,6 +93,8 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                     </div>
                 </div>
             </div>
+            
+            </>
         );
     };
 
@@ -118,6 +121,18 @@ const Editor = ({ currentTab, setCurrentTab }) => {
             </div>
             <div className="main-editor-content" style={activeTab.language === 'pdf' ? { padding: 0 } : {}}>
                 {renderContent()}
+            </div>
+            <div className="terminal-wrapper">
+                <div className="terminal-header">TERMINAL</div>
+                <div className="terminal-content">
+                    <div className="terminal-lines">
+                    PS C:\Users\rjoar\Documents\GitHub\portfolio&gt;
+                        <Typewriter
+                         speed = {10}
+                         text = "echo $intro_msg "/>
+                        <br></br>====== Read Below ======<br></br>Hey! If you have a hard time reading code,<br></br>click the RUN button in the top left<br></br>of the header to see the content better!
+                    </div>
+                </div>
             </div>
         </div>
     );
