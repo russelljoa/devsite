@@ -29,6 +29,7 @@
 }
 
 .main-editor-content {
+  padding-top: 1vh;
   flex: 1;
   display: flex;
   background-color: var(--vscode-bg);
@@ -76,7 +77,6 @@
   font-family: "Consolas", "Monaco", "Courier New", monospace;
   font-size: 14px;
   line-height: 1.5;
-  user-select: none;
   min-width: 40px;
   background-color: var(--vscode-bg);
   position: sticky;
@@ -96,6 +96,7 @@ pre {
   margin: 0;
   padding: 0;
   background: transparent !important;
+  
 }
 
 /* Set correct styling for prism code blocks */
@@ -235,7 +236,7 @@ code[class*="language-"] {
 
 .terminal-wrapper {
   display: block;
-  height: 20%;
+  height: 22%;
   flex-direction: column;
   background-color: var(--vscode-terminal-background);
   border-top: 1px solid rgb(74, 74, 74);
@@ -276,5 +277,22 @@ code[class*="language-"] {
   height: 18px;
   white-space: nowrap;
   
+}
+
+/* Apply 50% opacity to all scrollbars */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+}
+
+::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+}
+
+::-moz-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity for Firefox */
+}
+
+::-moz-scrollbar {
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity for Firefox */
 }
 

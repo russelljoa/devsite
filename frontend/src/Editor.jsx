@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Editor.css';
 import Tab from './Tab';
+import Cursor from './Cursor';
 import { tabsData } from '../data/Tabs';
 import Typewriter from './Typewriter';
 // Import Prism properly
@@ -126,11 +127,22 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                 <div className="terminal-header">TERMINAL</div>
                 <div className="terminal-content">
                     <div className="terminal-lines">
-                    PS C:\Users\rjoar\Documents\GitHub\portfolio&gt;
+                    PS C:\Users\rjoar\Documents\GitHub\portfolio&gt; <span> </span>
                         <Typewriter
-                         speed = {10}
-                         text = "echo $intro_msg "/>
-                        <br></br>====== Read Below ======<br></br>Hey! If you have a hard time reading code,<br></br>click the RUN button in the top left<br></br>of the header to see the content better!
+                        speed = {150}
+                        text = "echo $intro_msg"
+                        onComplete={() => {
+                            document.getElementById('read-below-message').style.display = 'block';
+                        }}
+                        />
+                        <br></br>
+                        <div id="read-below-message" style={{ display: 'none' }}>
+                            ====== Read Below ======<br></br>
+                            Hey! If you have a hard time reading code,<br></br>
+                            click the RUN button in the top right<br></br>
+                            of the header to see the content better!<br></br>
+                            <Cursor/>
+                        </div>
                     </div>
                 </div>
             </div>

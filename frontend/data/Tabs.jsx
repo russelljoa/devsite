@@ -73,7 +73,7 @@ my_education.display_education()
 <h2>Boston University</h2>
 <ul>
     <li> VP of Strategy at BU Blockchain Club (Arpil 2024 - Present) </li>
-    <li> Member of BU Blockchain Club (Sep 2023 - Arpil 2024) </li>
+    <li> Member of BU Blockchain Club (Sep 2024 - April 2024) </li>
 </ul>
 <h2>Westtown School</h2>
 <ul>

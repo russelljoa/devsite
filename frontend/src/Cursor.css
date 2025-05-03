@@ -1,0 +1,6 @@
+/* Cursor styles */
+.cursor {
+    font-size: inherit; /* Adjust size as needed */
+    font-weight: bold;
+    color: rgb(255, 255, 255); /* Adjust color as needed */
+}
