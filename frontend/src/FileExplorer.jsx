@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FileExplorer.css';
 import { tabsData } from '../data/Tabs';
 
@@ -8,6 +8,10 @@ const FileExplorer = ({ setCurrentTab, currentTab }) => {
         src: true,
         about: true
     });
+
+    useEffect(() => {
+        setCurrentTab("about.md");
+    }, [setCurrentTab]);
 
     const toggleFolder = (folder) => {
         setExpandedFolders({
