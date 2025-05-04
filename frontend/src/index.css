@@ -66,3 +66,15 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #5a5a5a;
 }
+
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('./assets/fonts/SegoeUI-VF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Replace Arial with SegoeUI */
+body {
+    font-family: 'SegoeUI', sans-serif;
+}

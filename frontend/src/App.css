@@ -10,14 +10,22 @@
   --vscode-highlight: #0e639c;
 }
 
+@font-face {
+  font-family: 'SegoeUI';
+  src: url('./assets/fonts/SegoeUI-VF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Replace Arial with SegoeUI */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'SegoeUI', sans-serif;
   color: var(--vscode-text);
 }
 

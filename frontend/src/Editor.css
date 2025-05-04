@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('./assets/fonts/SegoeUI-VF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .editor-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: 'SegoeUI', sans-serif;
 }
 
 .editor-header {
@@ -33,9 +41,10 @@
   flex: 1;
   display: flex;
   background-color: var(--vscode-bg);
-  
   overflow: hidden; /* Changed from overflow-y: auto to hidden */
+  overflow-y: auto;
 }
+
 
 /* New wrapper container to handle scrolling */
 .editor-content-wrapper {

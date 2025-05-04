@@ -20,7 +20,7 @@ blockchain applications to creating efficient algorithms.
 - Email: [rjoarder@bu.edu](mailto:rjoarder@bu.edu)
 - Phone: (484) 983-2295
 
-Feel free to explore the tabs above to learn more about my education, skills, and projects!`
+Feel free to explore the tabs above to learn more about my education, skills, and projects!\n\n\n\n`
     },
     {
         id: "education.py",
@@ -61,7 +61,7 @@ Feel free to explore the tabs above to learn more about my education, skills, an
 
 # Create an instance and display education information
 my_education = Education()
-my_education.display_education()
+my_education.display_education()\n\n\n\n
 `
     },
     {
@@ -82,7 +82,7 @@ my_education.display_education()
     <li> Varsity Wrestling - Three Time State Qualifier (Nov 2022 - Feb 2024) </li>
     <li> Member of Westtown School Investment Club (Sep 2022 - June 2023) </li>
 </ul>
-        `
+        \n\n\n\n`
     },
     {
         id: "skills.json",
@@ -130,7 +130,7 @@ my_education.display_education()
     "Investment",
     "Digital Entrepreneurship"
   ]
-}`
+}\n\n\n\n`
     },
     {
         id: "projects.jsx",
@@ -194,7 +194,7 @@ const Projects = () => {
   );
 };
 
-export default Projects;`
+export default Projects;\n\n\n\n`
     },
     {
         id: "contact.css",
@@ -212,7 +212,7 @@ export default Projects;`
  * Feel free to reach out any time! 
  * I am always open to discussing new projects, 
  * ideas, or opportunities to collaborate! 
- */`
+ */\n\n\n\n`
     },
     {
         id: "experience.java",
@@ -284,7 +284,7 @@ class Experience {
             System.out.println("• " + responsibility);
         }
     }
-}`
+}\n\n\n\n`
     },
     {
         id: "resume.pdf",
