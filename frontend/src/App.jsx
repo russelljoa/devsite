@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import Editor from "./Editor";
 import FileExplorer from "./FileExplorer";
+import Home from "./home/Home.jsx";
 
-function App() {
-    const [currentTab, setCurrentTab] = useState("home.md");
+// Main editor view component
+const EditorView = () => {
+    const [currentTab, setCurrentTab] = useState("about.md");
     
     return (
-    <>
         <div className="vscode-container">
             <div className="titlebar">
                 <div className="window-title">Russell Joarder Portfolio - Visual Studio Code</div>
@@ -26,7 +28,17 @@ function App() {
                 </div>
             </div>
         </div>
-    </>
+    );
+};
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<EditorView />} />
+                <Route path="/home" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 

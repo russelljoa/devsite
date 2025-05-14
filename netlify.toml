@@ -3,7 +3,7 @@
   publish = "dist/"
   command = "npm run build"
 
-# Redirects for SPA (Single Page Application)
+# Redirects for SPA (Single Page Application) with React Router
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Editor.css';
 import Tab from './Tab';
 import Cursor from './Cursor';
@@ -24,6 +25,8 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 const Editor = ({ currentTab, setCurrentTab }) => {
+    const navigate = useNavigate();
+    
     // Find the active tab content
     const activeTab = tabsData.find(tab => tab.id === currentTab) || tabsData[0];
 
@@ -111,10 +114,9 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                             onClick={() => setCurrentTab(tab.id)}
                         />
                     ))}
-                </div>
-                <div className="run-button-container">
+                </div>                <div className="run-button-container">
                     <div className="run-button-wrapper">
-                        <button className="run-button">
+                        <button className="run-button" onClick={() => navigate('/home')} title="Run and view portfolio">
                             <img src="/icons/run.png" alt="Run" className="run-icon" />
                         </button>
                     </div>

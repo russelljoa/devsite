@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto&family=Cardo&family=Space+Mono&family=IBM+Plex+Mono&display=swap');
+
+.doto-default {
+    font-family: 'Doto', sans-serif;
+    font-weight: 800;
+}
+
+.cardo-regular {
+    font-family: 'Cardo', serif;
+}
+
+.space-mono-regular {
+    font-family: 'Space Mono', monospace;
+}
+
+.ibm-plex-mono-regular {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.typer-container {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.typer-container.hidden {
+    opacity: 0;
+}
+
+.typer-container.visible {
+    opacity: 1;
+}
+

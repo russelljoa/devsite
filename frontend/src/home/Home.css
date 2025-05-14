@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto&family=Cardo&family=Space+Mono&family=IBM+Plex+Mono&display=swap');
+
+.home-body {
+    --main-bg: rgb(193, 199, 218);
+    --secondary-bg: rgb(169, 183, 232);
+    --text-main: rgb(24, 25, 32);
+    --text-secondary: rgb(35, 36, 45);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--secondary-bg);
+}
+
+.home-inner {
+    display: relative;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100% - 20px);
+    margin: 10px;
+    background-color: var(--main-bg);
+    border-radius: 10px;
+    background-image: radial-gradient(var(--secondary-bg) 2px, transparent 2px);
+    background-size: 30px 30px;
+    background-position: center center;
+}
+
+
+
+.doto {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: black;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
+.home-title {
+    font-size: 100px;
+    color: var(--text-main);
+    text-align: center;
+}
