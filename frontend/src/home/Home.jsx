@@ -9,8 +9,9 @@ export default function Home() {
   return (
     <div className="home-body">
         <div className="home-inner">
-            <h1 className="home-title doto">HI, I'M RUSSELL</h1>
-            <HomeHeader />
+          <HomeHeader />
+          <h1 className="home-title doto">HI, I'M RUSSELL</h1>
+            
             
         </div>
     </div>

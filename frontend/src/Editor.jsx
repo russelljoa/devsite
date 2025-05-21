@@ -102,6 +102,19 @@ const Editor = ({ currentTab, setCurrentTab }) => {
         );
     };
 
+    // Helper to get the fake folder for the breadcrumb
+    const getBreadcrumbFolder = (tab) => {
+        if (!tab) return '';
+        if (tab.language === 'pdf') return 'PORTFOLIO';
+        return 'SRC';
+    };
+
+    // Helper to get the file icon (same as Tab)
+    const getFileIcon = (tab) => tab && tab.iconfile ? tab.iconfile : '';
+
+    // Helper to get the file name
+    const getFileName = (tab) => tab && tab.title ? tab.title : '';
+
     return (
         <div className="editor-container">
             <div className="editor-header">
@@ -121,6 +134,19 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                         </button>
                     </div>
                 </div>
+            </div>
+            {/* Breadcrumb trail for fake file path */}
+            <div className="editor-breadcrumb">
+                <span className="breadcrumb-segment">Documents</span>
+                <img className="breadcrumb-arrow" src="/icons/arrow.png" alt="Arrow" />
+                <span className="breadcrumb-segment">GitHub</span>
+                <img className="breadcrumb-arrow" src="/icons/arrow.png" alt="Arrow" />
+                <span className="breadcrumb-segment">{getBreadcrumbFolder(activeTab)}</span>
+                <img className="breadcrumb-arrow" src="/icons/arrow.png" alt="Arrow" />
+                <span className="breadcrumb-file">
+                    <img src={getFileIcon(activeTab)} alt="file icon" className="breadcrumb-file-icon" />
+                    <span className="breadcrumb-file-name">{getFileName(activeTab)}</span>
+                </span>
             </div>
             <div className="main-editor-content" style={activeTab.language === 'pdf' ? { padding: 0 } : {}}>
                 {renderContent()}

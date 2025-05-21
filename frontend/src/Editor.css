@@ -14,7 +14,6 @@
 
 .editor-header {
   background-color: var(--vscode-sidebar-bg);
-  border-bottom: 1px solid var(--vscode-border);
   height: 40px;
   display: flex;
   align-items: center;
@@ -303,5 +302,59 @@ code[class*="language-"] {
 
 ::-moz-scrollbar {
   background-color: rgba(0, 0, 0, 0.5); /* 50% opacity for Firefox */
+}
+
+.editor-breadcrumb {
+  width: 100%;
+  background-color: var(--vscode-tab-active-bg);
+  color: var(--vscode-breadcrumb);
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 7px -2px var(--vscode-border);
+  z-index: 1;
+  overflow-y: hidden;
+}
+
+.breadcrumb-segment {
+  margin-right: 2px;
+  font-weight: 500;
+}
+
+.breadcrumb-separator {
+  margin: 0 6px;
+  color: var(--vscode-text);
+  opacity: 0.7;
+}
+
+.breadcrumb-file {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.breadcrumb-file-icon {
+  height: .9em;
+  width: .9em;
+  margin-right: 6px;
+  margin-top: 2px;
+  vertical-align: middle;
+}
+
+.breadcrumb-file-name {
+  font-weight: 500;
+}
+
+.breadcrumb-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px;
+  height: 1em;
+  width: 1em;
+  object-fit: contain;
+  opacity: 0.8;
 }
 

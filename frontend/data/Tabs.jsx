@@ -35,7 +35,7 @@ Feel free to explore the tabs above to learn more about my education, skills, an
                 "institution": "Boston University",
                 "location": "Boston, Massachusetts",
                 "expected_graduation": 2028,
-                "gpa": 4.0,
+                "gpa": 3.8,
                 "minor": "Business Administration & Management"
             },
             {

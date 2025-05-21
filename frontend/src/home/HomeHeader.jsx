@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './HomeHeader.css';
 
 const Home = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="header-main transparent">
-        
+        <div className="header-inner">
+          <button className="header-button"><span className='bracket'>[</span>Home<span className='bracket'>]</span></button>
+        </div>
     </div>
   );
 };

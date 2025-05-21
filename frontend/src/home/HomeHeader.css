@@ -1,0 +1,9 @@
+.header-main {
+    display: flex;
+    height: 7%;
+    width: 70%;
+}
+
+.transparent {
+    background-color: aqua;
+}   
