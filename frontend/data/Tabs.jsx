@@ -6,13 +6,13 @@ export const tabsData = [
         iconfile: "/icons/md.png",
         content: `# Russell Joarder
 
-Hello there! 👋 I'm a Boston University student studying Computer Science with a minor in Business Administration & Management.
+Hey! 👋 I'm a Boston University student studying Computer Science with a minor in Business Administration & Management.
 
 ## About Me
 
 I am a passionate developer with a strong foundation in various programming languages and technologies. As a creative problem solver,
-I'm dedicated to building responsive, user-friendly applications that solve real-world problems. My experience ranges from developing
-blockchain applications to creating efficient algorithms.
+I'm dedicated to building responsive, user-friendly software applications that solve real-world problems. My experience ranges from developing
+blockchain applications to running and managing a business of my own.
 
 ## Find Me Online
 
@@ -35,7 +35,7 @@ Feel free to explore the tabs above to learn more about my education, skills, an
                 "institution": "Boston University",
                 "location": "Boston, Massachusetts",
                 "expected_graduation": 2028,
-                "gpa": 4.0,
+                "gpa": 3.8,
                 "minor": "Business Administration & Management"
             },
             {
@@ -108,7 +108,7 @@ my_education.display_education()\n\n\n\n
     "systemKnowledge": [
       "MongoDB",
       "Webflow",
-      "Microsoft Excel",
+      "Microsoft Excel + Office Suite",
       "Git",
       "VS Code",
       "Stripe",
@@ -127,8 +127,11 @@ my_education.display_education()\n\n\n\n
     "Blockchain Technology",
     "Web Development",
     "Data Science",
-    "Investment",
-    "Digital Entrepreneurship"
+    "Investing",
+    "Digital Entrepreneurship",
+    "Cooking",
+    "Cars",
+    "Fitness",
   ]
 }\n\n\n\n`
     },
@@ -150,7 +153,7 @@ const Projects = () => {
     },
     {
       name: "Swap Squad",
-      description: "The first decentralized peer-to-peer marketplace on the TRON blockchain with competitive fees.",
+      description: "Decentralized peer-to-peer marketplace on the TRON blockchain with competitive fees.",
       tech: ["Solidity", "TRON", "React", "Flask"],
       achievements: "2nd Place Prize Winner at Hackathon",
       details: "Leveraged Solidity to build the smart contract on TRON network, ensuring security, transparency, and reliability"
