@@ -10,15 +10,15 @@ Hey! 👋 I'm a Boston University student studying Computer Science with a minor
 
 ## About Me
 
-I am a passionate developer with a strong foundation in various programming languages and technologies. As a creative problem solver,
-I'm dedicated to building responsive, user-friendly software applications that solve real-world problems. My experience ranges from developing
-blockchain applications to running and managing a business of my own.
+I’m a developer who loves building clean, responsive, and user-friendly software that actually solves problems.
+I’ve worked on everything from blockchain projects to running my own business, and I’m always looking for creative 
+ways to make ideas come to life.
 
 ## Find Me Online
 
 - LinkedIn: [linkedin.com/in/russell-joarder](https://linkedin.com/in/russell-joarder)
 - Email: [rjoarder@bu.edu](mailto:rjoarder@bu.edu)
-- Phone: (484) 983-2295
+- Instagram: [@russell.joar](https://www.instagram.com/russell.joar)
 
 Feel free to explore the tabs above to learn more about my education, skills, and projects!\n\n\n\n`
     },

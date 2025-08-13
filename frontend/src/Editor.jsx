@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import './Editor.css';
 import Tab from './Tab';
 import Cursor from './Cursor';
@@ -25,7 +24,9 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 const Editor = ({ currentTab, setCurrentTab }) => {
-    const navigate = useNavigate();
+    const [showDialog, setShowDialog] = useState(false);
+    const openDialog = () => setShowDialog(true);
+    const closeDialog = () => setShowDialog(false);
     
     // Find the active tab content
     const activeTab = tabsData.find(tab => tab.id === currentTab) || tabsData[0];
@@ -116,6 +117,7 @@ const Editor = ({ currentTab, setCurrentTab }) => {
     const getFileName = (tab) => tab && tab.title ? tab.title : '';
 
     return (
+        <>
         <div className="editor-container">
             <div className="editor-header">
                 <div className="tabs-container">
@@ -129,7 +131,7 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                     ))}
                 </div>                <div className="run-button-container">
                     <div className="run-button-wrapper">
-                        <button className="run-button" onClick={() => navigate('/home')} title="Run and view portfolio">
+                        <button className="run-button" onClick={openDialog} title="Run and view portfolio">
                             <img src="/icons/run.png" alt="Run" className="run-icon" />
                         </button>
                     </div>
@@ -167,9 +169,9 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                             <br></br>
                             <div id="read-below-message" style={{ display: 'none' }}>
                                 ====== Read Below ======<br></br>
-                                Hey! If you have a hard time reading code,<br></br>
-                                click the RUN button in the top right<br></br>
-                                of the header to see the content better!<br></br>
+                                Hey there! Feel free to click around<br></br>
+                                I made the site to look like VS Code with the Atom theme (what I use)<br></br>
+                                Check out my <a href="https://github.com/rjoar" target="_blank" rel="noopener noreferrer">GitHub</a> to see my other work!<br></br>
                                 <Cursor/>
                             </div>
                         </div>
@@ -177,6 +179,26 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                 </div>
             )}
         </div>
+        {showDialog && (
+            <div className="win11-dialog-overlay" onClick={closeDialog}>
+                <div className="win11-dialog" role="dialog" aria-modal="true" aria-labelledby="win11-dialog-title" onClick={(e) => e.stopPropagation()}>
+                    <div className="win11-titlebar">
+                        <div className="win11-title" id="win11-dialog-title">Error</div>
+                        <button className="win11-close" aria-label="Close" onClick={closeDialog}>✕</button>
+                    </div>
+                    <div className="win11-dialog-content">
+                        <div className="win11-icon error" aria-hidden="true"></div>
+                        <div className="win11-message">
+                            Hey there, this doesn't work just yet!
+                        </div>
+                    </div>
+                    <div className="win11-actions">
+                        <button className="win11-btn" onClick={closeDialog} autoFocus>OK</button>
+                    </div>
+                </div>
+            </div>
+        )}
+        </>
     );
 };
 
