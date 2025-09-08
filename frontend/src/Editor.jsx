@@ -171,7 +171,7 @@ const Editor = ({ currentTab, setCurrentTab }) => {
                                 ====== Read Below ======<br></br>
                                 Hey there! Feel free to click around<br></br>
                                 I made the site to look like VS Code with the Atom theme (what I use)<br></br>
-                                Check out my <a href="https://github.com/rjoar" target="_blank" rel="noopener noreferrer">GitHub</a> to see my other work!<br></br>
+                                Check out my <a href="https://github.com/russelljoa" target="_blank" rel="noopener noreferrer">GitHub</a> to see my other work!<br></br>
                                 <Cursor/>
                             </div>
                         </div>
